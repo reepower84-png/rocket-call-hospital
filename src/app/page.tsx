@@ -402,7 +402,7 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-2xl border border-gray-200 hover-lift">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">관심 고객 DB</h3>
-              <p className="text-gray-600 mb-6">치료 관심이 확인된 잠재 고객 DB 제공</p>
+              <p className="text-gray-600 mb-6">방문 관심이 확인된 잠재 고객 DB 제공</p>
               <ul className="space-y-3 mb-8">
                 {[
                   "1차 관심도 확인 완료",
