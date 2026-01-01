@@ -406,7 +406,7 @@ export default function Home() {
               <ul className="space-y-3 mb-8">
                 {[
                   "1차 관심도 확인 완료",
-                  "치료 니즈 파악된 고객",
+                  "방문 니즈 파악된 고객",
                   "병원에서 직접 예약 진행",
                   "합리적인 가격",
                 ].map((item, index) => (
