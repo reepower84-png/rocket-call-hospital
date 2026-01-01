@@ -178,7 +178,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">1차 컨택</h3>
               <p className="text-gray-600 leading-relaxed">
-                잠재 고객에게 먼저 연락하여 병원 치료에 대한 <strong>관심도와 니즈를 파악</strong>합니다.
+                잠재 고객에게 먼저 연락하여 병원 방문에 대한 <strong>관심도와 니즈를 파악</strong>합니다.
                 단순 관심이 아닌, 실제 방문 의향이 있는 분들만 선별합니다.
               </p>
             </div>
