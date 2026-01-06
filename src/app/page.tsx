@@ -548,7 +548,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-            <p className="mb-2">상호명: 제이코리아 | 대표: 이주영 | 사업자등록번호: 278-30-01540</p>
+            <p className="mb-2">상호: 제이코리아, 대표: 이주영, 사업자등록번호: 278-30-01540</p>
             <p>© 2024 로켓콜. All rights reserved.</p>
           </div>
         </div>
