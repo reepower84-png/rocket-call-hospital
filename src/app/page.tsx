@@ -41,12 +41,21 @@ export default function Home() {
     document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* 상단 헤더 */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold text-gray-900">로켓콜</h1>
+          <h1
+            onClick={scrollToTop}
+            className="text-xl font-bold text-gray-900 cursor-pointer hover:text-cyan-600 transition-colors"
+          >
+            로켓콜
+          </h1>
           <a
             href="https://drive.google.com/file/d/1FGpJjks9asLnWIAS6wd7be0ARZDssLNM/view?usp=drive_link"
             target="_blank"
