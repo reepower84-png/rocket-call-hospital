@@ -2,10 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 import { supabase } from "@/lib/supabase";
 
 async function sendDiscordNotification(name: string, phone: string, message: string) {
+  console.log("=== Discord 알림 전송 시작 ===");
+  console.log("고객명:", name);
+  console.log("연락처:", phone);
+
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+  console.log("Webhook URL 존재 여부:", !!webhookUrl);
+  console.log("Webhook URL 앞 50자:", webhookUrl?.substring(0, 50));
 
   if (!webhookUrl) {
-    console.warn("Discord webhook URL is not configured");
+    console.error("Discord webhook URL is not configured!");
     return;
   }
 
@@ -53,6 +59,7 @@ async function sendDiscordNotification(name: string, phone: string, message: str
   };
 
   try {
+    console.log("Discord API 호출 중...");
     const response = await fetch(webhookUrl, {
       method: "POST",
       headers: {
@@ -63,8 +70,12 @@ async function sendDiscordNotification(name: string, phone: string, message: str
       }),
     });
 
+    console.log("Discord API 응답 상태:", response.status);
     if (!response.ok) {
-      console.error("Discord webhook error:", response.status, await response.text());
+      const errorText = await response.text();
+      console.error("Discord webhook error:", response.status, errorText);
+    } else {
+      console.log("=== Discord 알림 전송 성공! ===");
     }
   } catch (error) {
     console.error("Failed to send Discord notification:", error);
@@ -101,7 +112,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Discord 알림 전송 (비동기로 처리하여 응답 지연 방지)
-    sendDiscordNotification(name, phone, message).catch(console.error);
+    console.log("sendDiscordNotification 함수 호출 시작");
+    sendDiscordNotification(name, phone, message).catch((err) => {
+      console.error("sendDiscordNotification 에러:", err);
+    });
 
     return NextResponse.json(
       { success: true, message: "상담 신청이 완료되었습니다." },
