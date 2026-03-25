@@ -535,7 +535,7 @@ export default function Home() {
       {/* 푸터 */}
       <footer className="py-12 bg-gray-900 text-gray-400">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div>
               <h3 className="flex items-center gap-2 text-xl font-bold text-white mb-2">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -562,6 +562,18 @@ export default function Home() {
               >
                 제안서 다운로드
               </a>
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-white mb-3">계열사</h4>
+              <ul className="space-y-1.5 text-sm">
+                <li><a href="https://rk-intro.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">로켓콜 인트로</a></li>
+                <li><a href="https://rocket-call.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">로켓콜_보험설계사</a></li>
+                <li><a href="https://rocket-call-auto-dealer.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">로켓콜_자동차딜러</a></li>
+                <li><a href="https://rocket-call-realestate.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">로켓콜_부동산분양</a></li>
+                <li><a href="https://rocket-call-franchise.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">로켓콜_프랜차이즈 가맹</a></li>
+                <li><a href="https://rk-policy.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">로켓콜_정책자금</a></li>
+                <li><a href="https://rk-lawyer.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">로켓콜_변호사</a></li>
+              </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
