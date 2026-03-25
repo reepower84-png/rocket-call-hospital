@@ -526,6 +526,15 @@ export default function Home() {
                 {isSubmitting ? "신청 중..." : "상담 신청하기"}
               </button>
 
+              <a
+                href="http://pf.kakao.com/_zxfugn/chat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full mt-3 bg-[#FEE500] hover:bg-[#F5DC00] text-[#3C1E1E] font-semibold py-4 rounded-xl transition-colors text-center"
+              >
+                카카오톡으로 상담하기
+              </a>
+
               {submitStatus === "error" && (
                 <p className="mt-4 text-red-500 text-center text-sm">
                   오류가 발생했습니다. 다시 시도해주세요.
